@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealityClone - Mathis Bodin</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../project-detail.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo"></div>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../../index.html#accueil">Accueil</a></li>
+                <li><a href="../../index.html#projets">Projets</a></li>
+                <li><a href="../../index.html#competences">Compétences</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="project-detail">
+    <div class="container">
+        <div class="back-button">
+            <a href="../../index.html#projets" class="btn secondary">
+                <span class="arrow">←</span> Retour aux projets
+            </a>
+        </div>
+
+        <div class="project-header">
+            <h1>
+                <span class="highlight">RealityClone</span>
+                <br>
+                Pipeline complet pour l’entraînement et la visualisation de Gaussian Splatting</h1>
+            <div class="project-tags">
+                <span>Gaussian Splatting</span>
+                <span>AR</span>
+                <span>VR</span>
+                <span>Flutter</span>
+                <span>Express.js</span>
+                <span>Unity</span>
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="main-media">
+                <img src="images/realityclone_cover.png" alt="Aperçu principal du projet">
+            </div>
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active">
+                    <img src="images/realityclone_cover.png" alt="Aperçu 1">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/realityclone_colmap_sparse.png" alt="Aperçu 2">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/realityclone_output_static.png" alt="Aperçu 3">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/realityclone_output_animated.gif" alt="Aperçu 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>À propos du <span class="highlight">projet</span></h2>
+                <p>
+                    RealityClone est un projet étudiant réalisé en équipe, visant à automatiser l'acquisition,
+                    l'entraînement et la visualisation de modèles 3D à partir d'images via la technique du Gaussian
+                    Splatting.
+                    Le projet se compose de trois modules interconnectés, chacun développé avec des technologies
+                    différentes, offrant une expérience complète du back-end au front-end en passant par l'AR et la VR.
+                </p>
+
+
+                <h3>📱 1. Application mobile de capture (Flutter + AR)</h3>
+                <p>Développée avec Flutter et le plugin AR Flutter Plugin, cette application permet de :</p>
+                <ul>
+                    <li>Capturer des images avec leur position et orientation en temps réel grâce à la réalité
+                        augmentée.
+                    </li>
+                    <li>Choisir entre un mode manuel ou un mode automatique (capture déclenchée par un seuil de
+                        déplacement).
+                    </li>
+                    <li>Gérer une galerie de photos avant l’envoi (suppression possible en cas de flou ou doublon).</li>
+                    <li>Activer une option pour recalculer les poses avec COLMAP si les données AR sont inexactes.I</li>
+                    <li>Interagir avec le serveur pour envoyer les données, consulter les modèles existants, les
+                        renommer ou les supprimer.
+                    </li>
+                </ul>
+
+                <h3>🌐 2. Serveur Express.js (Node.js + Python + SQLite)</h3>
+                <p>Le serveur joue le rôle de pont entre l’application mobile et le pipeline d’entraînement :</p>
+                <ul>
+                    <li>Expose une API RESTful pour recevoir les données de capture.</li>
+                    <li>Lance automatiquement les étapes de traitement :
+                        <ul>
+                            <li>Reconstruction structure-from-motion via COLMAP</li>
+                            <li>Entraînement du modèle via un script Python de Gaussian Splatting</li>
+                        </ul>
+                    </li>
+                    <li>Gère une base SQLite pour stocker les modèles créés, accessibles depuis le mobile ou la visionneuse.</li>
+                </ul>
+
+                <h3>🖥️ 3. Visionneuse VR (Unity)</h3>
+                <p>L’application desktop, développée avec Unity, permet de :</p>
+                <ul>
+                    <li>Se connecter à l’API pour récupérer la liste des modèles disponibles.</li>
+                    <li>Visualiser un ou plusieurs modèles en réalité virtuelle, avec un système de sélection.</li>
+                    <li>Fournir une interface immersive pour explorer les reconstructions 3D issues des captures.</li>
+                </ul>
+
+
+                <h3>🧠 Aspects techniques et apprentissages</h3>
+                <ul>
+                    <li>Utilisation combinée de Flutter, Unity, Node.js, Python et SQLite, avec une communication API fluide entre les composants.</li>
+                    <li>Intégration de réalité augmentée (AR) pour la capture d'images avec pose, et réalité virtuelle (VR) pour la visualisation.</li>
+                    <li>Automatisation complète du pipeline : capture ➝ envoi ➝ entraînement ➝ visualisation.</li>
+                    <li>Gestion des formats, compression (zip), transmission multipart, et appels réseau complexes.</li>
+                    <li>Prise en compte de l’expérience utilisateur, avec suppression de photos ratées, gestion des erreurs, et feedback visuel/haptique.</li>
+                </ul>
+
+
+            </div>
+
+            <div class="project-sidebar">
+                <div class="project-info">
+                    <h3>Informations</h3>
+                    <div class="info-item">
+                        <span class="info-label">Date</span>
+                        <span class="info-value">Setp. 2024 - Mars. 2025</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Réalisé par</span>
+                        <span class="info-value">Mathis Bodin, Antoine Cabane, Maxence Caron, Aloïs Roberjot</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <h3>Liens</h3>
+                    <a href="https://github.com/MaaxCrn/Reality-Clone" class="external-link" target="_blank">
+                        <span class="link-icon">GitHub</span>
+                        <span class="link-text">Code source</span>
+                    </a>
+                    <a href="https://github.com/graphdeco-inria/gaussian-splatting" class="external-link" target="_blank">
+                        <span class="link-icon">GitHub</span>
+                        <span class="link-text">Gaussian Splatting</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-project">
+            <h3>Projet suivant</h3>
+            <a href="project.html" class="btn primary">Voir le projet suivant</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Mathis Bodin. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="../../js/script.js" type="module"></script>
+<script src="../../js/project-detail.js"></script>
+</body>
+</html>
+
