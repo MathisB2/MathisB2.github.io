@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-photo">
+                    <img src="images/me_background.png" alt="Ma photo de profil">
+                </div>
+                <div class="hero-text">
+                    <h1>Mathis Bodin</h1>
+                    <p class="subtitle">Apprenti développeur passionné par la 3D et la réalité augmentée</p>
+                    <div class="cta-buttons">
+                        <a href="#projets" class="btn primary">Voir mes projets</a>
+                        <a href="#contact" class="btn secondary">Me contacter</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero-image">
+                <div class="blob-effect"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2>Mes <span class="highlight">Projets</span></h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Projet 1</h3>
+                    <p>Description du projet avec des détails sur les technologies utilisées et les défis relevés.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="projects/mobcoin/project.html" class="btn small">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Projet 2</h3>
+                    <p>Description du projet avec des détails sur les technologies utilisées et les défis relevés.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                    </div>
+                    <a href="projects/realityclone/project.html" class="btn small">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Projet 3</h3>
+                    <p>Description du projet avec des détails sur les technologies utilisées et les défis relevés.</p>
+                    <div class="project-tags">
+                        <span>Vue.js</span>
+                        <span>Firebase</span>
+                    </div>
+                    <a href="projects/projet-3.html" class="btn small">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2>Mes <span class="highlight">Compétences</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Mobile</h3>
+                    <ul>
+                        <li>Kotlin</li>
+                        <li>Flutter (Dart)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web</h3>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>TypeScript/Javascript</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>Vue.js</li>
+                        <li>Three.js</li>
+                        <li>WebXR</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Bases de données</h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>MongoDB</li>
+                        <li>Firebase</li>
+                        <li>Neo4J</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Outils</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Android Studio</li>
+                        <li>Docker</li>
+                        <li>Figma</li>
+                        <li>Blender</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Me <span class="highlight">Contacter</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <span>mathis.bodin@etu.univ-lyon1.fr</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📱</span>
+                            <span>+33 7 69 40 60 36</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>Mâcon, France</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mathis-bodin-0630922a2/" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/mathisb2/" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mathis Bodin. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+</body>
+</html>
+
