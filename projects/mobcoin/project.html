@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobCoin - Mathis Bodin</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../project-detail.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"> </div>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#accueil">Accueil</a></li>
+                    <li><a href="../../index.html#projets">Projets</a></li>
+                    <li><a href="../../index.html#competences">Compétences</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <div class="container">
+            <div class="back-button">
+                <a href="../../index.html#projets" class="btn secondary">
+                    <span class="arrow">←</span> Retour aux projets
+                </a>
+            </div>
+            
+            <div class="project-header">
+                <h1>
+                    <span class="highlight">MobCoin</span>
+                    <br>
+                    Application de suivi des cryptomonnaies</h1>
+                <div class="project-tags">
+                    <span>Android</span>
+                    <span>Kotlin</span>
+                    <span>XML</span>
+                    <span>UX/UI Design</span>
+                    <span>Crypto</span>
+                    <span>API</span>
+                </div>
+            </div>
+            
+            <div class="project-gallery">
+                <div class="main-media">
+                    <img src="images/mobcoin_cover.png" alt="Aperçu principal du projet">
+                </div>
+                <div class="thumbnail-gallery">
+                    <div class="thumbnail active">
+                        <img src="images/mobcoin_cover.png" alt="Aperçu 1">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/mobcoin_pages1.png" alt="Aperçu 2">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/mobcoin_pages2.png" alt="Aperçu 3">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>À propos du <span class="highlight">projet</span></h2>
+                    <p>MobCoin est une application mobile Android développée en Kotlin dans le cadre d’un projet étudiant en équipe. L’objectif était de couvrir tout le cycle de développement mobile, de la conception UI jusqu’au déploiement continu.</p>
+
+
+                    <h3>Fonctionnalités principales</h3>
+                    <ul>
+                        <li><strong>Accueil : </strong>liste des cryptos populaires + stats du marché</li>
+                        <li><strong>Détail : </strong>vue d’un coin avec graphique, prix, rang, market cap, etc.</li>
+                        <li><strong>Favoris : </strong>ajout/suppression de coins favoris, persistés par utilisateur</li>
+                        <li><strong>Recherche : </strong>trouver les informations d'un coin via l'API</li>
+                        <li><strong>Portfolio : </strong>simulation d’un portefeuille avec répartition graphique</li>
+                        <li><strong>Authentification : </strong>login/register avec gestion de compte local</li>
+                    </ul>
+
+                    <h3>Stack & architecture</h3>
+                    <ul>
+                        <li><strong>Langage : </strong>Kotlin + XML (Material 3)</li>
+                        <li><strong>Architecture : </strong>MVVM (ViewModel, Repository, LiveData/StateFlow)</li>
+                        <li><strong>API : </strong>Intégration de CoinGecko via Retrofit</li>
+                        <li><strong>UI : </strong>UI-Kit Material3, conception sur Figma</li>
+                        <li><strong>Graphiques : </strong>MPAndroidChart</li>
+                        <li><strong>Persistance locale : </strong>Room + SharedPreferences</li>
+                        <li><strong>Navigation : </strong>BottomNavigationView + Fragments</li>
+                        <li><strong>CI/CD : </strong>Bitrise (build APK signé à chaque push sur main)</li>
+                    </ul>
+
+                    <h3>Déploiement</h3>
+                    <ul>
+                        <li>Build flavors (develop, preproduction, production) avec icônes distinctes</li>
+                        <li>Build automatique via Bitrise CI/CD</li>
+                    </ul>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="project-info">
+                        <h3>Informations</h3>
+                        <div class="info-item">
+                            <span class="info-label">Date</span>
+                            <span class="info-value">Setp. 2024 - Janv. 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Réalisé par</span>
+                            <span class="info-value">Mathis Bodin, Maxence Caron, Aloïs Roberjot</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <h3>Liens</h3>
+                        <a href="https://github.com/MathisB2/MobCoin" class="external-link" target="_blank">
+                            <span class="link-icon">GitHub</span>
+                            <span class="link-text">Code source</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="next-project">
+                <h3>Projet suivant</h3>
+                <a href="../realityclone/project.html" class="btn primary">Voir le projet suivant</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mathis Bodin. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js" type="module"></script>
+    <script src="../../js/project-detail.js"></script>
+</body>
+</html>
+
