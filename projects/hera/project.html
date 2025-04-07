@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hera - Mathis Bodin</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../project-detail.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo"> </div>
+        <button class="mobile-menu-toggle" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../../index.html#accueil">Accueil</a></li>
+                <li><a href="../../index.html#projets">Projets</a></li>
+                <li><a href="../../index.html#competences">Compétences</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="project-detail">
+    <div class="container">
+        <div class="back-button">
+            <a href="../../index.html#projets" class="btn secondary">
+                <span class="arrow">←</span> Retour aux projets
+            </a>
+        </div>
+
+        <div class="project-header">
+            <h1>
+                <span class="highlight">Hera</span>
+                <br>
+                Création de projets de réalité augmentée no-code</h1>
+            <div class="project-tags">
+                <span>Réalité augmentée</span>
+                <span>API</span>
+                <span>Three.js</span>
+                <span>WebXR</span>
+                <span>Vue.js</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>SQLite</span>
+                <span>Sequelize</span>
+            </div>
+        </div>
+
+        <div class="project-gallery">
+            <div class="main-media">
+                <img src="images/hera_cover.png" alt="Aperçu principal du projet">
+            </div>
+            <div class="thumbnail-gallery">
+                <div class="thumbnail active">
+                    <img src="images/hera_cover.png" alt="Aperçu 1">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/hera_pages1.png" alt="Aperçu 2">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/hera_pages2.png" alt="Aperçu 3">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/hera_pages3.png" alt="Aperçu 3">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/hera_pages4.png" alt="Aperçu 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>À propos du <span class="highlight">projet</span></h2>
+                <p>Hera est une plateforme web développée dans le cadre d’un stage de 2ᵉ année de BUT Informatique, dont l’objectif est de permettre à tout utilisateur, même sans compétences en programmation, de créer et partager des projets en réalité augmentée (AR) à vocation pédagogique.</p>
+
+
+                <h3>🎯 Objectifs du projet</h3>
+                <ul>
+                    <li>Permettre la création de scènes AR personnalisées sans écrire de code.</li>
+                    <li>Offrir une visualisation immersive de projets éducatifs à travers une interface AR.</li>
+                    <li>Rendre les projets accessibles au public, favorisant ainsi le partage de contenus interactifs.</li>
+                </ul>
+
+
+                <h3>🧩 Fonctionnalités principales</h3>
+                <h4>🖼️ Viewer AR</h4>
+                <ul>
+                    <li>Accès public aux projets finalisés.</li>
+                    <li>Affichage AR via WebXR et Three.js.</li>
+                    <li>Chaque projet est structuré en scènes personnalisables (par exemple : "époque", "couleur", "état").</li>
+                    <li>Affichage de modèles 3D (.glb/.gltf) et annotations 3D localisées dans la scène.</li>
+                    <li>Aperçu en simple 3D (sans AR) disponible avec fonctionnalités réduites.</li>
+                </ul>
+
+                <h4>✏️ Éditeur</h4>
+                <ul>
+                    <li>Accessible après authentification (login/register).</li>
+                    <li>Interface intuitive pour :
+                        <ul>
+                            <li>Créer un projet (titre, description, image).</li>
+                            <li>Définir un type de scène (libre : "couleur", "année", etc.).</li>
+                            <li>Ajouter des scènes contenant :
+                                <ul>
+                                    <li>Des modèles 3D</li>
+                                    <li>Des annotations</li>
+                                    <li>Un éditeur 3D permettant des déplacer/tourner les éléments</li>
+                                </ul>
+                            </li>
+                            <li>Fonctionnalités de sauvegarde et de publication vers le viewer.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+               <h4>🧠 Backend (API + base de données)</h4>
+                <ul>
+                    <li>API RESTful développée avec Node.js et Express.js.</li>
+                    <li>Requêtes GET / POST pour interagir avec la base de données (création, modification, lecture de projets, scènes, assets...).</li>
+                    <li>Base de données SQLite gérée avec Sequelize (ORM).</li>
+                </ul>
+
+
+                <h3>🧪 Technologies utilisées</h3>
+                <ul>
+                    <li><strong>Frontend : </strong>Vue.js</li>
+                    <li><strong>Backend : </strong>Node.js, Express.js</li>
+                    <li><strong>Base de données : </strong>SQLite, Sequelize</li>
+                    <li><strong>AR / 3D : </strong>Three.js, WebXR</li>
+                    <li><strong>Autres : </strong>Vite (build frontend), systemd (démarrage serveur), Apache2 (hébergement)</li>
+                </ul>
+
+
+                <h3>⚙️ Points techniques notables</h3>
+                <ul>
+                    <li>Utilisation avancée de Three.js pour la visualisation interactive 3D et AR.</li>
+                    <li>Architecture REST pour assurer une séparation claire entre frontend et backend.</li>
+                    <li>Gestion fine des relations complexes avec Sequelize (projets → scènes → assets / annotations).</li>
+                    <li>Configuration d’un serveur web Apache2 pour héberger plusieurs apps Vue.js simultanément.</li>
+                    <li>Mise en service du backend via systemd, pour garantir un lancement automatique et une disponibilité continue.</li>
+                </ul>
+            </div>
+
+            <div class="project-sidebar">
+                <div class="project-info">
+                    <h3>Informations</h3>
+                    <div class="info-item">
+                        <span class="info-label">Date</span>
+                        <span class="info-value">Avril 2024 - Juin 2024</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Réalisé par</span>
+                        <span class="info-value">Mathis Bodin</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Organisé par</span>
+                        <span class="info-value">IUT Lyon1, LIRIS</span>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <h3>Liens</h3>
+                    <a href="https://github.com/liris-xr/HERA" class="external-link" target="_blank">
+                        <span class="link-icon">GitHub</span>
+                        <span class="link-text">Code source</span>
+                    </a>
+                    <a href="https://hera.univ-lyon1.fr/" class="external-link" target="_blank">
+                        <span class="link-icon">Hera</span>
+                        <span class="link-text">Démo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-project">
+            <h3>Projet suivant</h3>
+            <a href="../mobcoin/project.html" class="btn primary">Voir le projet suivant</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Mathis Bodin. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="../../js/script.js" type="module"></script>
+<script src="../../js/project-detail.js"></script>
+</body>
+</html>
+
